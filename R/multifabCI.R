@@ -83,13 +83,15 @@ hhetmodel<-function(y,g)
 #' @keywords htest
 #' 
 #' @examples 
-#' y<-rnorm(100) ; g<-sample(1:10,100,replace=TRUE)
-#' multifabCI(y,g)  
+#' ## -- simulated data
+#' p<-10 ; n<-10
+#' y<-rnorm(n*p) ; g<-rep(1:p,n) 
 #'
-#' data(radon)
+#' ## -- more interesting data takes longer 
+#' # data(radon) ; y<-radon[,2] ; g<-radon[,1] 
 #'
 #' ## -- FAB t-intervals
-#' FCI<-multifabCI(radon[,2],radon[,1]) 
+#' FCI<-multifabCI(y,g) 
 #'
 #' ## -- UMAU t-intervals 
 #' ybar<-tapply(y,g,mean) ; ssd<-tapply(y,g,sd) ; n<-table(g) 

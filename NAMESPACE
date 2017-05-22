@@ -9,4 +9,8 @@ export(multifabCI)
 export(multifabCIhom)
 export(pppaccept)
 export(wfabt)
-export(wfabz)
+export(wfabz) 
+
+importFrom("stats", "dnorm", "integrate", "optim", "optimize", "pnorm",
+             "pt", "qnorm", "qt", "sd", "uniroot", "var")
+
