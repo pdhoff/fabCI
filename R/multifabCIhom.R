@@ -1,7 +1,7 @@
 #' @title FAB t-interval with z-optimal w-function
 #' 
 #' @description Computation of a 1-alpha FAB t-interval using the w-function of
-#' the optimal FAB z-interval. 
+#' the optimal FAB z-interval
 #'  
 #' @details Internal function for multifabCIhom. It's similar to fabtCI, the 
 #' difference being that fabtwzCI uses the w-function that leads to the 
@@ -65,7 +65,7 @@ fabtwzCI<-function(y,s2,df,muw,t2w,s2w,alpha=.05)
 
 #' @title Hierarchical homoscedastic model estimates 
 #' 
-#' @description Estimate across-group heterogeneity of means. 
+#' @description Estimate across-group heterogeneity of means
 #'
 #' @details This function estimates 
 #' parameters in a hierarchical model for normally distributed

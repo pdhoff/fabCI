@@ -18,7 +18,7 @@ fabzCI(y, mu, t2, s2, alpha = 0.05)
 \item{alpha}{the type I error rate, so 1-alpha is the coverage rate}
 }
 \description{
-Computation of a 1-alpha FAB z-interval.
+Computation of a 1-alpha FAB z-interval
 }
 \details{
 A FAB interval is the "frequentist" interval procedure

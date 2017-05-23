@@ -1,6 +1,6 @@
 #' @title FAB t-interval
 #' 
-#' @description Computation of a 1-alpha FAB t-interval. 
+#' @description Computation of a 1-alpha FAB t-interval
 #'  
 #' @details A FAB interval is the "frequentist" interval procedure
 #' that is Bayes optimal: It  minimizes the prior expected
@@ -34,6 +34,8 @@
 #' fabtCI(y,c(2,10,1,5))
 #' fabtCI(y,c(0,1/10,1,5)) 
 #' 
+#' @import stats 
+#'
 #' @export
 fabtCI<-function(y,psi=c(0,100,1,2),alpha=.05)
 {

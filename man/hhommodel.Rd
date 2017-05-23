@@ -26,7 +26,7 @@ A vector (s2,df,muw,t2w,s2w), where
 }
 }
 \description{
-Estimate across-group heterogeneity of means.
+Estimate across-group heterogeneity of means
 }
 \details{
 This function estimates 

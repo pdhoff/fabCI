@@ -1,6 +1,6 @@
 #' @title Hierarchical heteroscedastic model estimates
 #' 
-#' @description Estimate across-group heterogeneity of means and variances. 
+#' @description Estimate across-group heterogeneity of means and variances
 #'
 #' @details This function estimates 
 #' parameters in a hierarchical model for normally distributed

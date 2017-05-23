@@ -20,7 +20,7 @@ A vector (mu,t2,s20,nu0), where
 }
 }
 \description{
-Estimate across-group heterogeneity of means and variances.
+Estimate across-group heterogeneity of means and variances
 }
 \details{
 This function estimates 

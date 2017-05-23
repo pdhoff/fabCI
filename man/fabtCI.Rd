@@ -14,7 +14,7 @@ fabtCI(y, psi = c(0, 100, 1, 2), alpha = 0.05)
 \item{alpha}{the type I error rate, so 1-alpha is the coverage rate}
 }
 \description{
-Computation of a 1-alpha FAB t-interval.
+Computation of a 1-alpha FAB t-interval
 }
 \details{
 A FAB interval is the "frequentist" interval procedure

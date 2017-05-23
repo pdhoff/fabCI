@@ -23,7 +23,7 @@ fabtwzCI(y, s2, df, muw, t2w, s2w, alpha = 0.05)
 }
 \description{
 Computation of a 1-alpha FAB t-interval using the w-function of
-the optimal FAB z-interval.
+the optimal FAB z-interval
 }
 \details{
 Internal function for multifabCIhom. It's similar to fabtCI, the 

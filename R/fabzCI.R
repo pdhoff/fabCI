@@ -1,6 +1,6 @@
 #' @title FAB z-interval
 #' 
-#' @description Computation of a 1-alpha FAB z-interval. 
+#' @description Computation of a 1-alpha FAB z-interval
 #'  
 #' @details A FAB interval is the "frequentist" interval procedure
 #' that is Bayes optimal: It  minimizes the prior expected
@@ -71,37 +71,5 @@ fabzCI<-function(y,mu,t2,s2,alpha=.05)
 
   c(thetaL,thetaU)
 }
-
-#' @title Bayes-optimal w-function
-#'
-#' @description Compute Bayes optimal w-function
-#'
-#' @details This function computes the 
-#' value of w that minimizes the acceptance probability of a 
-#' biased level-alpha test for a normal population with 
-#' known variance, under a specified  prior
-#' predictive distribution.
-#' 
-#' @param theta value of theta being tested
-#' @param mu prior mean of theta
-#' @param t2 prior variance of theta
-#' @param s2 population variance
-#' @param alpha level of test
-#'
-#' @author Peter Hoff 
-#' 
-#' @keywords internal 
-#' 
-#' @export
-wfabz<-function(theta,mu,t2,s2,alpha=.05)
-{
-  igfun<-function(x,alpha)
-  {
-    gwmx <-function(w){ qnorm(alpha*w) - qnorm(alpha*(1-w)) - x }
-    uniroot(gwmx,interval=c(0,1),maxiter=2000,tol=.Machine$double.eps^0.5)$root
-  }
-  igfun( 2*sqrt(s2)*(theta-mu)/t2,alpha)
-}
-
 
 
