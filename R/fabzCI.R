@@ -55,7 +55,8 @@ fabzCI<-function(y,mu,t2,s2,alpha=.05)
   }
   a<-b<- y + s*qnorm(1-alpha)  
   while(ubroot(a)<0){ a<- a - 1e-12  }
-  while(ubroot(b)>0){ b<- b + s*qnorm(1-alpha)*.25 }
+  #while(ubroot(b)>0){ b<- b + s*qnorm(1-alpha)*.25 }
+  while(ubroot(b)>0){ b <-  b + s } 
   thetaU<-uniroot(ubroot,c(a,b))$root
 
 
@@ -65,7 +66,8 @@ fabzCI<-function(y,mu,t2,s2,alpha=.05)
      theta
   }
   a<-b<- y + s*qnorm(alpha) 
-  while(lbroot(a)<0){ a<- a + s*qnorm(alpha)*.25 }
+  #while(lbroot(a)<0){ a<- a + s*qnorm(alpha)*.25 } 
+  a <- a - s
   while(lbroot(b)>0){ b<- b + 1e-12  }
   thetaL<-uniroot(lbroot,c(a,b))$root
 

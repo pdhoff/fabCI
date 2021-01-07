@@ -3,14 +3,17 @@ Title: FAB Confidence Intervals
 Version: 0.2
 Description: Frequentist assisted by Bayes (FAB) confidence interval
     construction. See 'Adaptive multigroup confidence intervals with constant
-    coverage' by Yu and Hoff <https://arxiv.org/abs/1612.08287> and
+    coverage' by Yu and Hoff <DOI:10.1093/biomet/asy009> and  
     'Exact adaptive confidence intervals for linear regression coefficients'
-    by Hoff and Yu <https://arxiv.org/abs/1705.00000>.
+    by Hoff and Yu <DOI:10.1214/18-EJS1517>.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Imports: MASS
-Date: 2017-05-25
+Date: 2021-01-07
 Author: Peter Hoff and Chaoyu Yu
 Maintainer: Peter Hoff <peter.hoff@duke.edu>
-RoxygenNote: 5.0.1
+RoxygenNote: 5.0.1 
+
+
+

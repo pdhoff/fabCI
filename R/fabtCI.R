@@ -57,7 +57,8 @@ fabtCI<-function(y,psi=c(0,100,1,2),alpha=.05)
       ybar + s*qt(1-alpha*w,n-1)/sqrt(n) - theta
     } 
     a<-b<-ybar + .99*(s/sqrt(n))*qt(1-alpha,n-1)
-    while(ubroot(b)>0){ b<- b + (s/sqrt(n))*qnorm(1-alpha)*n/(n+4) }
+    #while(ubroot(b)>0){ b<- b + (s/sqrt(n))*qnorm(1-alpha)*n/(n+4) }
+    while(ubroot(b)>0){ b<- b + s/sqrt(n) }
     thetaU<-uniroot(ubroot,c(a,b))$root
 
     lbroot<-function(theta)
@@ -66,7 +67,8 @@ fabtCI<-function(y,psi=c(0,100,1,2),alpha=.05)
       ybar + s*qt(alpha*(1-w),n-1)/sqrt(n) - theta
     }
     a<-b<-ybar + .99*(s/sqrt(n))*qt(alpha,n-1)
-    while(lbroot(a)<0){ a<- a + (s/sqrt(n))*qnorm(alpha)*n/(n+4) }
+    #while(lbroot(a)<0){ a<- a + (s/sqrt(n))*qnorm(alpha)*n/(n+4) } 
+    while(lbroot(a)<0){ a<- a - s/sqrt(n) }
     thetaL<-uniroot(lbroot,c(a,b))$root
   } 
  

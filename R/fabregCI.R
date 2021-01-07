@@ -159,8 +159,10 @@ fabtzCI<-function(y,s,dof,alpha=.05,psi=list(mu=0,tau2=1e5,sigma2=1))
       sfabz(theta,alpha=alpha,psi=psi) - pt( (y-theta)/s,dof )/alpha 
     }
     a<-b<-y+s*qt(1-alpha,dof) 
-    while(root(a)>0){ a<- a + s*qnorm(alpha)*.25 }
-    while(root(b)<0){ b<- b + s*qnorm(1-alpha)*.25 }  
+    #while(root(a)>0){ a<- a + s*qnorm(alpha)*.25 }
+    #while(root(b)<0){ b<- b + s*qnorm(1-alpha)*.25 }  
+    while(root(a)>0){ a<- a - s } 
+    while(root(b)<0){ b<- b + s } 
     thetaU<-uniroot(root,c(a,b))$root 
 
     root<-function(theta)
@@ -168,8 +170,10 @@ fabtzCI<-function(y,s,dof,alpha=.05,psi=list(mu=0,tau2=1e5,sigma2=1))
       sfabz(theta,alpha=alpha,psi=psi) - (1- pt( (theta-y)/s,dof )/alpha) 
     }
     a<-b<-y+s*qt(alpha,dof) 
-    while(root(a)>0){ a<- a + s*qnorm(alpha)*.25 }
-    while(root(b)<0){ b<- b + s*qnorm(1-alpha)*.25 }
+    #while(root(a)>0){ a<- a + s*qnorm(alpha)*.25 }
+    #while(root(b)<0){ b<- b + s*qnorm(1-alpha)*.25 }
+    while(root(a)>0){ a<- a - s } 
+    while(root(b)<0){ b<- b + s } 
     thetaL<-uniroot(root,c(a,b))$root  
   }
 
